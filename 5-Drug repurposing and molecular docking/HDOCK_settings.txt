@@ -1,0 +1,13 @@
+We have already provided the docking workflow, including software and key parameters, as follows:
+
+# Protein preparation:
+The crystal structure of CD40 in complex with CD40L (PDB ID: 3QD6 113) was used as the protein receptor for the molecular docking of the anti-human CD40 antibody. Meanwhile, CD40L (PDB ID: 3LKJ 110) was selected as the receptor for docking of repurposed drugs to block the PPI of CD40/CD40L. For LRP1, two binding subunits, CR56 (PDB ID: 2FYL 114) and CR17 (PDB ID: 2KNX 115), were utilized as receptor structures for docking with candidate small molecules. Protein structures were prepared by setting the protonation states to physiological pH (7.0) using the PDB2PQR web server (http://hdock.phys.hust.edu.cn/). 
+
+# Ligand preparation:
+The protonation states and pKa values of small molecules were determined using ChemAxon MarvinSketch. Ligand geometry was optimized using MMFF94 force fields before docking.
+
+# Docking protocol:
+All docking simulations involving drugs or antibodies targeting the CD40/CD40L or CR56/CR17 subunits of the LRP1 protein were conducted using the HDOCK server (http://hdock.phys. hust.edu.cn/), which utilizes a hybrid docking algorithm. Key parameters included the docking type (protein–protein or protein–ligand, as appropriate) and the scoring function (HDOCK's internal scoring based on shape complementarity and energy minimization).
+
+# Evaluation metrics:
+Docking scores, reported as binding energies in kcal/mol, were used as the primary criterion for ranking the docking results. Specifically, the HDOCK docking score, which approximates the binding free energy between the ligand (drug or antibody) and the receptor (target protein), was employed to evaluate the predicted binding affinity. Lower (i.e., more negative) docking scores indicated stronger predicted interactions. For each protein–ligand and protein–protein docking scenario, the top-ranked complex, as determined by the HDOCK score, was selected for further analysis. The molecular interactions, including hydrogen bonding, hydrophobic contacts, and salt bridge formation, were visually inspected using the PDBsum website 118, Accelrys Discovery Studio 3.0 (Accelrys Inc.), and the University of California at San Francisco (UCSF) Chimera package. 
