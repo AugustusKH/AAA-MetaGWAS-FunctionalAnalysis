@@ -1,0 +1,5 @@
+Three GWAS summary statistics files can be downloaded from the GWAS Catalog (https://www.ebi.ac.uk/gwas/)
+
+# GCST90399672 (https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90399001-GCST90400000/GCST90399672/)
+# GCST90080047 (https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90080001-GCST90081000/GCST90080047/)
+# GCST90044009 (https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90044001-GCST90045000/GCST90044009/)
