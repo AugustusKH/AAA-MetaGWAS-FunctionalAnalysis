@@ -1,0 +1,35 @@
+
+# Convert the METAL summary statistics result to the LD-score format
+cd /Users/macbookair/ldsc/
+source activate ldsc
+python munge_sumstats.py --sumstats METAANALYSIS1.TBL --out METAANALYSIS1 --a1 Allele1 --a2 Allele2 --p P-value --keep-maf
+
+# Run FUSION.assoc_test.R in run.sh script
+sh run.sh
+ 
+# This code below shows the bash script details in run.sh
+
+#########################################################################################################################
+
+#!/bin/bash
+
+# Run FUSION all chromosomes
+for chr in $(seq 1 22); do
+    Rscript /Users/macbookair/fusion_twas-master/FUSION.assoc_test.R \
+        --sumstats /Users/macbookair/fusion_twas-master/aorta/METALANALYSIS1.sumstats \
+        --weights /Users/macbookair/fusion_twas-master/aorta/WEIGHT/GTExv8.EUR.Artery_Aorta.pos \
+        --weights_dir /Users/macbookair/fusion_twas-master/aorta/WEIGHT/ \
+        --ref_ld_chr /Users/macbookair/fusion_twas-master/LDREF/1000G.EUR. \
+        --out /Users/macbookair/fusion_twas-master/aorta/twas_result.tsv.chr${chr} \
+        --chr ${chr}
+done
+
+# Combine per chromomsome TWAS results
+head -1 /Users/macbookair/fusion_twas-master/aorta/twas_result.tsv.chr1 > /Users/macbookair/fusion_twas-master/aorta/twas_result.tsv.GW
+tail -n +2 -q /Users/macbookair/fusion_twas-master/aorta/twas_result.tsv.chr* >> /Users/macbookair/fusion_twas-master/aorta/twas_result.tsv.GW
+
+#########################################################################################################################
+
+# Check the TWAS result
+head twas_result.tsv.GW 
+
