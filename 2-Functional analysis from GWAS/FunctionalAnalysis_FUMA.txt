@@ -1,0 +1,5 @@
+FUMA (https://fuma.ctglab.nl/, accessed on 7 April 2024) was employed for genomic risk loci mapping, gene-based statistics calculation, and functional annotation of the GWAS results with default settings. The program has two main modes: SNP2GENE and GENE2FUNC.
+
+SNP2GENE was used to identify lead and independent significant SNPs, genomic risk loci and eQTLs mapping. Parameters related to linkage disequilibrium (LD) blocks, such as r2 and MAF, were computed using the 1000 Genomes Project Phase 3 EUR as the reference panel. Gene expression data of aorta tissue from GTEx v8 was used for eQTL mapping. 
+
+MAGMA, integrated in FUMA, was used to analyze gene-set enrichment, incorporating curated gene sets and gene ontology (GO) terms from the Molecular Signature Database (MSigDB v7.0). MAGMA was also utilized for the analysis of tissue-specific expression among GTExv8 tissues 61. Furthermore, the second main mode (GENE2FUNC) in FUMA was employed to analyze the mapped genes from SNP2GENE for their average expression across GTEx v8 tissues. 
