@@ -1,4 +1,4 @@
-# Functional Analysis Based on Genome-wide Association Study Meta-analysis in Abdominal Aortic Aneurysm 
+# Functional analysis based on genome-wide association study meta-analysis in abdominal aortic aneurysm 
 
 This repository contains codes used for functional-based genome-wide association study (GWAS) meta-analysis in abdominal aortic aneurysm (AAA). All codes are publicly available to ensure reproducibility and contribution to future RT research.
 
